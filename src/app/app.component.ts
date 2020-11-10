@@ -8,8 +8,8 @@ import { Component, VERSION } from "@angular/core";
 export class AppComponent {
   name = "Angular " + VERSION.major;
 
-  onPaste($event) {
-    console.log("#01#", { eve: $event });
+  onPaste(event: unknown) {
+    console.log("#01#", { eve: event });
     throw new Error("on paste throws error!");
   }
 }

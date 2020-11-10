@@ -1,4 +1,15 @@
 <p>
   part works!
 </p>
-<textarea></textarea>
+<div>
+  <textarea></textarea>
+</div>
+<div>
+  <textarea #textarea (paste)="pasteFromClipboard($event)"></textarea>
+</div>
+<div>
+  <textarea
+    #textarea
+    (paste)="pasteFromClipboardStopPropagation($event)"
+  ></textarea>
+</div>
